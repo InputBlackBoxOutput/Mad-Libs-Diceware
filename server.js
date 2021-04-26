@@ -48,6 +48,15 @@ app.get("/madlibs-diceware", (req, res)=> {
 	}
 })
 
+app.get("/eff-wordlist", (req, res)=> {
+    res.send(diceware.wordlistEFF);
+
+});
+
+app.get("/madlibs-wordlist", (req,res)=> {
+	res.send(diceware.wordlistMadlibs);
+})
+
 app.get("*", (req, res)=>{
 	res.status(404).send({error: 'Invalid route', redirect: '/madlibs-diceware'})
 })

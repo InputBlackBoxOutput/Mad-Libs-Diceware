@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth;">
+    <head>
+      <title> Madlibs Diceware </title>
+
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta name="description" content="Madlibs Diceware: Generate a secure and strong password">
+      
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+
+    <body>
+      <div class="container-fluid my-1 py-2">
+        <div class="row">
+          <div id="main" class="col my-1 py-2 pl-3">	
+            <hr>
+            <label class="h3">Madlibs Diceware</label>
+            <hr>
+            <!-- <label> Number of phrases:</label>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-light n-eff">1</button>
+              <button type="button" class="btn btn-light n-eff">2</button>
+            </div> -->
+
+            <div class="col mt-2">
+                <p id="out-mad" class="alert alert-success" role="alert"> 
+                </p>
+            </div>  
+          </div>
+
+          <div class="col my-1 py-2 pl-3"> 
+            <hr> 
+            <label class="h3">Plain Diceware</label>
+            <hr>
+            <!-- <label> Number of words:</label>
+            <div class="btn-group mr-2" role="group" aria-label="First group">
+              <button type="button" class="btn btn-light n-eff">4</button>
+              <button type="button" class="btn btn-light n-eff">5</button>
+              <button type="button" class="btn btn-light n-eff">6</button>
+              <button type="button" class="btn btn-light n-eff">7</button>
+            </div> -->
+
+            <div class="col mt-2">
+                <p id="out-eff" class="alert alert-success" role="alert"> 
+                </p>
+                <!-- <p id="passwd-eff" class="alert alert-success" role="alert"> 
+                </p>
+                <p id="stat-eff" class="alert alert-success" role="alert"> 
+                </p> -->
+            </div>             
+          </div>
+        </div>
+
+        <div class="row d-flex justify-content-center">
+          <div>
+            <button id="generate" type="button" class="btn m-2 btn-success btn-lg"> Generate password </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-fluid my-1 py-3">
+          <p class="h4">What is Madlibs Diceware?</p>
+          <hr>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsam eum id quod modi alias, nihil laboriosam iure cum amet cupiditate. Minima, non expedita rem aliquid ea ad quibusdam soluta.
+          </p>
+          
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsam eum id quod modi alias, nihil laboriosam iure
+            cum amet cupiditate. Minima, non expedita rem aliquid ea ad quibusdam soluta.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsam eum id quod modi alias, nihil laboriosam iure
+            cum amet cupiditate. Minima, non expedita rem aliquid ea ad quibusdam soluta.
+          </p>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsam eum id quod modi alias, nihil laboriosam iure
+            cum amet cupiditate. Minima, non expedita rem aliquid ea ad quibusdam soluta.
+          </p>
+      </div>
+
+      <div class="row m-0 p-0" style="background-color: #343A40">
+          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+              <p class="h6">© 2020 Rutuparn Pawar ( <a style="color: white" href="https://github.com/InputBlackBoxOutput">InputBlackBoxOutput<a> )</p>
+          </div>
+          <hr>
+      </div>
+
+      <!-- Bootstrap related scripts -->
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+      <script type="text/javascript" src="index.js"></script>
+	</body>
+</html>

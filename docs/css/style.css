@@ -1,8 +1,17 @@
+html {
+	scroll-behavior: smooth;
+}
+
 body {
   /*background-color: rgb(255, 194, 108);*/
   background-color: #6A6A6A;
+  font-family: 'Roboto', sans-serif;
 }
 
 .container-fluid {
   background-color: white;
+}
+
+#about {
+	font-size: medium;
 }

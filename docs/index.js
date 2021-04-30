@@ -29,8 +29,18 @@ function madlibsDiceware() {
     .then(response => {
         if(response.data == undefined)
             outMadlibs.innerText = "Could not get in touch with the server!";
-        else
-            outMadlibs.innerText = response.data.password;
+        else {
+            words = response.data.password.split(' ');
+            words[1] = "<b>" + words[1] + '</b>';
+            words[2] = "<b>" + words[2] + '</b>';
+            words[3] = "<b>" + words[3] + '</b>';
+            words[6] = "<b>" + words[6] + '</b>';
+            words[7] = "<b>" + words[7] + '</b>';
+            words[8] = "<b>" + words[8] + '</b>';
+
+            password = words.join(' ');
+            outMadlibs.innerHTML = password;
+        }
     })
     .catch(error => {
         console.log(error);

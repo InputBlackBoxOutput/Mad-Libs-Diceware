@@ -3,8 +3,8 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // Base URLs
-const baseURL = "https://madlibs-diceware.herokuapp.com";
-// const baseURL = "http://localhost:5000"; // Use for testing purposes
+// const baseURL = "https://madlibs-diceware.herokuapp.com";
+const baseURL = "http://localhost:5000"; // Use for testing purposes
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // Linking to the DOM
@@ -26,32 +26,27 @@ const generate = document.getElementById('generate');
 
 function madlibsDiceware() {
     axios.get(`${baseURL}/madlibs-diceware`)
-    .then(response => {
-        if(response.data == undefined)
-            outMadlibs.innerText = "Could not get in touch with the server!";
-        else {
-            words = response.data.password.split(' ');
-            words[1] = "<b>" + words[1] + '</b>';
-            words[2] = "<b>" + words[2] + '</b>';
-            words[3] = "<b>" + words[3] + '</b>';
-            words[6] = "<b>" + words[6] + '</b>';
-            words[7] = "<b>" + words[7] + '</b>';
-            words[8] = "<b>" + words[8] + '</b>';
+        .then(response => {
+            if (response.data == undefined)
+                outMadlibs.innerText = "The server is angry about something and is not replying!";
+            else {
+                words = response.data.password.split(' ');
+                words[1] = "<b>" + words[1] + '</b>';
+                words[2] = "<b>" + words[2] + '</b>';
+                words[3] = "<b>" + words[3] + '</b>';
+                words[6] = "<b>" + words[6] + '</b>';
+                words[7] = "<b>" + words[7] + '</b>';
+                words[8] = "<b>" + words[8] + '</b>';
 
-            password = words.join(' ');
-            outMadlibs.innerHTML = password;
-        }
-    })
-    .catch(error => {
-        console.log(error);
-        outMadlibs.innerText = "An error occured!";
-    });
+                password = words.join(' ');
+                outMadlibs.innerHTML = password;
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            outMadlibs.innerText = "Something went wrong!";
+        });
 }
-
-generate.addEventListener('click', ()=> {
-    madlibsDiceware();
-    effDiceware();
-})
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 // Diceware using EFF wordlist
@@ -62,17 +57,24 @@ generate.addEventListener('click', ()=> {
 
 function effDiceware() {
     axios.get(`${baseURL}/eff-diceware`)
-    .then(response => {
-        if(response.data == undefined)
-            outEFF.innerText = "Could not get in touch with the server";
-        else
-            outEFF.innerText = response.data.password;
-    })
-    .catch(error => {
-        console.log(error);
-        outEFF.innerText("An error occured!");
-    })
+        .then(response => {
+            if (response.data == undefined)
+                outEFF.innerText = "The server is angry about something and is not replying!";
+            else
+                outEFF.innerText = response.data.password;
+        })
+        .catch(error => {
+            console.log(error);
+            outEFF.innerText = "Something went wrong!";
+        })
 }
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
+generate.addEventListener('click', () => {
+    outMadlibs.innerText = ".....";
+    outEFF.innerText = ".....";
+
+    madlibsDiceware();
+    effDiceware();
+})

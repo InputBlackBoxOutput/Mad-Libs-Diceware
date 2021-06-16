@@ -43,22 +43,25 @@ function effDiceware(nWords = 5) {
 		}
 
 		words.push([wordlistEFF[rolls], rolls]);
-		password += wordlistEFF[rolls] + " ";
+		password += wordlistEFF[rolls]
+
+		if (i != nWords - 1)
+			password += ' ';
 	}
 
 	// Password statistics
+	entropy = (password.length - (nWords - 1)) * Math.log2(26);
+	entropy = entropy.toFixed(2);
+	possible_combinations = Math.pow(7776, nWords);
+	crack_time = timeToCrack(possible_combinations);
 
-	// entropy = Math.round(password.length * Math.log2(7776) * 100) / 100;
-	// possibleCombinations = Math.pow(7776, nWords);
-	// time = timeToCrack(possibleCombinations);
-
-	// return { words, password, entropy, possibleCombinations, time };
-	return { password };
+	return { words, password, entropy, possible_combinations, crack_time };
+	// return { password };
 }
 
 module.exports.effDiceware = effDiceware;
 
-function madDiceware(nPhrase = 2) {
+function madDiceware(nPhrases = 2) {
 	password = "";
 	r = [];
 	for (let i = 0; i < 6; i++)
@@ -74,22 +77,25 @@ function madDiceware(nPhrase = 2) {
 
 	words = [adv1, adj1, noun1, adv2, adj2, noun2];
 
-	if (nPhrase == 1)
+	if (nPhrases == 1)
 		password = `A ${words[0]} ${words[1]} ${words[2]}`;
-	else if (nPhrase == 2)
+	else if (nPhrases == 2)
 		password = `A ${words[0]} ${words[1]} ${words[2]} and a ${words[3]} ${words[4]} ${words[5]}`;
 	else
 		throw "Number of phrases can be either 1 or 2";
 
 	// Password statistics
+	// Substracting 9 from password lenght to remove redundant parts like spaces
 
-	// Actual length of password = Length of password - 9 to deal with fixed parts of the password
-	// entropy = Math.round((password.length - 9) * Math.log2(7776) * 100) / 100;
-	// possibleCombinations = Math.pow(1296, nPhrase * 3);
-	// time = timeToCrack(possibleCombinations);
+	len = nPhrases == 1 ? password.length - 4 : password.length - 13;
+	entropy = len * Math.log2(26);
+	entropy = entropy.toFixed(2);
 
-	// return { words, password, entropy, possibleCombinations, time };
-	return { password };
+	possible_combinations = Math.pow(1296, nPhrases * 3);
+	crack_time = timeToCrack(possible_combinations);
+
+	return { words, password, entropy, possible_combinations, crack_time };
+	// return { password };
 }
 
 module.exports.madDiceware = madDiceware;

@@ -1,7 +1,7 @@
-# Madlibs Diceware
+# Mad Libs Diceware
 Diceware generated passwords that you can easily remember
 
-#### Demo: https://inputblackboxoutput.github.io/Madlibs-Diceware/
+#### Demo: https://mad-libs-diceware.netlify.app/
 
 #### API documentation: https://documenter.getpostman.com/view/15527533/TzRPi919
 

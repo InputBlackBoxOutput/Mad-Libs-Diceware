@@ -1,11 +1,11 @@
 html {
-	scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
   /*background-color: rgb(255, 194, 108);*/
-  background-color: #6A6A6A;
-  font-family: 'Roboto', sans-serif;
+  background-color: #6a6a6a;
+  font-family: "Roboto", sans-serif;
 }
 
 .container-fluid {
@@ -13,5 +13,5 @@ body {
 }
 
 #about {
-	font-size: medium;
+  font-size: medium;
 }

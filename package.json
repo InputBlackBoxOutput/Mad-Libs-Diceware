@@ -1,25 +1,28 @@
 {
-  "name": "madlib_diceware",
+  "name": "mad-libs-diceware",
   "version": "1.0.0",
-  "description": "Madlib aided diceware",
+  "description": "Generate easily memorizable passwords",
   "main": "server.js",
   "scripts": {
-    "start": "node server",
-    "dev-start": "nodemon server"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev-start": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/InputBlackBoxOutput/Madlib_Diceware.git"
+    "url": "git+https://github.com/InputBlackBoxOutput/Mad-Libs-Diceware.git"
   },
   "author": "Rutuparn Pawar",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/InputBlackBoxOutput/Madlib_Diceware/issues"
+    "url": "https://github.com/InputBlackBoxOutput/Mad-Libs-Diceware/issues"
   },
-  "homepage": "https://github.com/InputBlackBoxOutput/Madlib_Diceware#readme",
+  "homepage": "https://github.com/InputBlackBoxOutput/Mad-Libs-Diceware#readme",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {}
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongodb": "^4.8.1",
+    "nodemon": "^2.0.19"
+  }
 }

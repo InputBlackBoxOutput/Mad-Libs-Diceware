@@ -3,7 +3,8 @@ import React from "react";
 const QuestionAnswer = (props) => {
     return (<>
         <p>
-            <big>💭 {props.question}</big><br />
+            <b><big>💭 {props.question}</big></b>
+            <br />
             {props.answer}
         </p>
         <br />
@@ -104,6 +105,7 @@ const Information = () => {
         </div>
 
         <p>Tool used to calculate the time to crack metric: https://random-ize.com/how-long-to-hack-pass/</p>
+        <br />
 
         <QuestionAnswer
             question={"How does Mad Libs Diceware make it easy to remember a password?"}
@@ -115,7 +117,7 @@ const Information = () => {
                 <br /><br />
 
                 If you wish, you can make it much more easier to type by using the characters lying at multiples of your
-                favourite digit. For instance, if your favourite digit is 3, <b>immovably thin crackers inverssely vengeful begger</b>
+                favourite digit. For instance, if your favourite digit is 3, <b> immovably thin crackers inverssely vengeful begger </b>
                 becomes <b> mayiaevslnfgr </b>. Remember to have atleast 15 characters in your password for it to be strong and
                 secure. You can also substitute alphabetic characters with similar looking symbols. For example, 's' can be substituted
                 with '$' in a password.

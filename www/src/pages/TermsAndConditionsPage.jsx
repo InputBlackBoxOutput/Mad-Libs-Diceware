@@ -1,6 +1,10 @@
-import React from "react";
+import { React, useEffect } from "react";
 
 const TermsAndConditionsPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div class="container-fluid pb-2 pt-3">
             <h1>Terms and Conditions</h1>

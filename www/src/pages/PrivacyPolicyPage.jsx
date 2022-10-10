@@ -1,6 +1,10 @@
-import React from "react";
+import { React, useEffect } from "react";
 
 const PrivacyPolicyPage = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div class="container-fluid pt-3 pb-2">
             <h1>Privacy Policy</h1>

@@ -114,11 +114,9 @@ app.get("/mad-libs-wordlist", (req, res) => {
 })
 
 app.get("*", (req, res) => {
-	res.status(404).send({ error: 'Invalid route', redirect: '/madlibs-diceware' })
+	res.status(404).send({ error: 'Invalid route', redirect: '/mad-libs-diceware' })
 })
 
 app.listen(port, () =>
 	console.log(`Listening on port ${port}!`),
 );
-
-// EOF

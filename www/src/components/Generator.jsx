@@ -1,7 +1,7 @@
 import React from "react";
 import axios from 'axios';
 
-const baseURL = "https://madlibs-diceware.herokuapp.com";
+const baseURL = "https://mad-libs-diceware.fly.dev";
 // const baseURL = "http://localhost:5000"; // Use for local testing purposes
 
 const LabelledOutput = (props) => {

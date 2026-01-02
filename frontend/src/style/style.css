@@ -4,7 +4,7 @@ html {
 
 body {
   /*background-color: rgb(255, 194, 108);*/
-  background-color: #6a6a6a;
+  background-color: #959595;
   font-family: "Roboto", sans-serif;
 }
 
@@ -12,6 +12,21 @@ body {
   background-color: white;
 }
 
-/* #about {
-  font-size: medium;
-} */
+#generate-password-button {
+  font-size: 1.25rem;
+  min-width: 30%;
+}
+
+#mad-libs-diceware-text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.75rem;
+  letter-spacing: 0.1rem;
+  width: 80%;
+}
+
+.eff-diceware-text {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.15rem;
+  letter-spacing: 0.1rem;
+  width: 80%;
+}

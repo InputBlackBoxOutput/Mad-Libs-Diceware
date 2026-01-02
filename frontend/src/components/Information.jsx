@@ -2,7 +2,7 @@ import React from "react";
 
 const QuestionAnswer = (props) => {
     return (<>
-        <p>
+        <p className="m-0">
             <b><big>💭 {props.question}</big></b>
             <br />
             {props.answer}
@@ -55,13 +55,8 @@ const TimeToCrackTable = (props) => {
     </>);
 }
 
-
 const Information = () => {
-    return (<div className='container-fluid py-2 mt-2'>
-        <label className="h4 pt-3">About Mad Libs Diceware</label>
-        <hr />
-
-
+    return (<div className='container-fluid px-4 py-4 mt-2'>
         <QuestionAnswer
             question={"What is Mad Libs Diceware?"}
             answer={<>

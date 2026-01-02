@@ -13,4 +13,4 @@ Diceware generated passwords that you can easily remember
 |Nouns wordlist       |[🔗](wordlists/nouns.txt)|
 |EFF diceware wordlist|[🔗](wordlists/eff-wordlist.txt)|
 
-### Made with lots of ⏱️, 📚 and ☕ by [InputBlackBoxOutput](https://github.com/InputBlackBoxOutput)
+### Made with lots of ⏱️, 📚 and ☕ by InputBlackBoxOutput

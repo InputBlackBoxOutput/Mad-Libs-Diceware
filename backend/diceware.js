@@ -1,7 +1,3 @@
-// File: diceware.js
-// Written by Rutuparn Pawar (InputBlackBoxOutput)
-
-// Resources
 // Wordlist parts of speech in english: http://www.ashley-bovan.co.uk/words/partsofspeech.html
 // Entropy calculated using formula at https://www.pleacher.com/mp/mlessons/algebra/entropy.html
 
@@ -31,12 +27,11 @@ function effDiceware(wordlistEFF, nWords = 6) {
     crack_time = timeToCrack(possible_combinations);
 
     return { words, password, entropy, possible_combinations, crack_time };
-    // return { password };
 }
 
 module.exports.effDiceware = effDiceware;
 
-function madDiceware(wordlistMadlibs) {
+function madLibsDiceware(wordlistMadlibs) {
     password = "";
     r = [];
     for (let i = 0; i < 6; i++)
@@ -65,7 +60,7 @@ function madDiceware(wordlistMadlibs) {
     return { words, password, entropy, possible_combinations, crack_time };
 }
 
-module.exports.madDiceware = madDiceware;
+module.exports.madLibsDiceware = madLibsDiceware;
 
 function timeToCrack(possibleCombinations) {
     const guessesPerSec = 10000000000;
@@ -81,6 +76,3 @@ function timeToCrack(possibleCombinations) {
     return { seconds, minutes, hours, days, weeks, months, years };
 
 }
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////
-// EOF

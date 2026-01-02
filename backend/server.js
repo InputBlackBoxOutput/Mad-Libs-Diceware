@@ -70,7 +70,7 @@ app.get("/mad-libs-diceware", (req, res) => {
 				"nouns": result[2]["list"]
 			};
 
-			res.send(diceware.madDiceware(wordlistMadlibs = wordlist));
+			res.send(diceware.madLibsDiceware(wordlistMadlibs = wordlist));
 
 		});
 	});
